@@ -23,3 +23,7 @@ pg_dump --no-password -U postgres -h $DB_HOST -p 15023 -Fc --verbose "ProdPromo"
 # Compress the dump file with high compression
 tar -czf /var/www/dump/ProdPromo.dump.tar.gz /var/www/dump/ProdPromo.dump
 
+pg_dump --no-password -U postgres -h $DB_HOST -p 15023 -Fc --verbose "ProdEvent" > /var/www/dump/ProdEvent.dump
+# Compress the dump file with high compression
+tar -czf /var/www/dump/ProdEvent.dump.tar.gz /var/www/dump/ProdEvent.dump
+
